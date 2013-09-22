@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+namespace PalidromExcercise
+{
+    public static class TextTool
+    {
+        public static string UpperFirst(string s) 
+        {
+            return Regex.Replace(s, "a","o");
+        }
+       
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const string s1 = "samuel allen";
+            const string s2 = "dot net perls";
+            const string s3 = "Mother teresa";
+
+            Console.WriteLine(TextTool.UpperFirst(s1));
+            Console.WriteLine(TextTool.UpperFirst(s2));
+            Console.WriteLine(TextTool.UpperFirst(s3));
+            string input = "Hej, hurrrr är läget?\n";
+            
+           string output1 = Regex.Replace(input, "h....r", "HUR");
+
+           char[] output2 = input.ToCharArray();
+
+           string output3 = input.ToUpper();
+
+            Console.WriteLine(output1+"\n");
+            Console.WriteLine(output2+"\n");
+            Console.WriteLine(output3+"\n");
+
+       
+        }
+    }
+}
